@@ -12,42 +12,57 @@ props：
 7. textStyle (obj style) 选填 文本样式
 8. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
 
-使用事例：
-```
-<RollingText 
-    textList = {[{label : '1',value : '1234567890abcdefghigklmnopqrstuvwxyz啊吧从的额分个好i个看了吗你哦平去人是他uv我想有在'},{label : '2',value : '  哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟'},{label : '3',value : '  喝口水的交话费了喝口水的交话费了'}]}
-    speed = {60}
-    width = {100}
-    height = {40}
-    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-    textStyle = {{fontSize : 12,color : '#FF0000'}}
-    onTextClick = {(item) => {
-        console.log(item);
-        Alert.alert(''+JSON.stringify(item));
-    }}
-/>
+使用教程：
+1.下载 RollingText.js 文件 放到项目中。
+2.直接引入直接使用，无需添加其他代码。
 
-<RollingText 
-    textList = {this.state.list}
-    speed = {60}
-    width = {300}
-    height = {40}
-    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-    textStyle = {{fontSize : 15,color : '#FF0000'}}
-    onTextClick = {(item) => {
-        console.log(item);
-        Alert.alert(''+JSON.stringify(item));
-        if(this.state.list.length < 5){
-            this.setState({
-                list : [
-                    {label : '1',value : 'kllskdjgjsioiejfalksdhjlashdgsjkdhfssd'},
-                    {label : '2',value : '    如果是辽阔的国际化卢萨卡；积分；阿尔回复；就考试大纲as；的接口规范；是的'},
-                    {label : '3',value : '    公司肯德基疯狂夺金'},
-                    {label : '4',value : '    工商联快递费吉林省大发牢骚'},
-                    {label : '5',value : '    gois就你付款金黄色的'}
-                ]
-            })
-        }
-    }}
-/>
+事例代码：
+```
+//引入RollingText.js文件
+import RollingText from './RollingText';
+
+......
+
+render() {
+    return (
+        <View style = {{ flex : 1 ,backgroundColor : '#FFFFFF' }}>
+            <RollingText 
+                textList = {[{label : '1',value : '1234567890abcdefghigklmnopqrstuvwxyz啊吧从的额分个好i个看了吗你哦平去人是他uv我想有在'},{label : '2',value : '  哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟'},{label : '3',value : '  喝口水的交话费了喝口水的交话费了'}]}
+                speed = {60}
+                width = {100}
+                height = {40}
+                bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                textStyle = {{fontSize : 12,color : '#FF0000'}}
+                onTextClick = {(item) => {
+                    console.log(item);
+                    Alert.alert(''+JSON.stringify(item));
+                }}
+            />
+
+            <RollingText 
+                textList = {this.state.list}
+                speed = {60}
+                width = {300}
+                height = {40}
+                bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                textStyle = {{fontSize : 15,color : '#FF0000'}}
+                onTextClick = {(item) => {
+                    console.log(item);
+                    Alert.alert(''+JSON.stringify(item));
+                    if(this.state.list.length < 5){
+                        this.setState({
+                            list : [
+                                {label : '1',value : 'kllskdjgjsioiejfalksdhjlashdgsjkdhfssd'},
+                                {label : '2',value : '    如果是辽阔的国际化卢萨卡；积分；阿尔回复；就考试大纲as；的接口规范；是的'},
+                                {label : '3',value : '    公司肯德基疯狂夺金'},
+                                {label : '4',value : '    工商联快递费吉林省大发牢骚'},
+                                {label : '5',value : '    gois就你付款金黄色的'}
+                            ]
+                        })
+                    }
+                }}
+            />
+        </View>
+    );
+}
 ```
