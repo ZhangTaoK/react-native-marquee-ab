@@ -66,3 +66,10 @@ render() {
     );
 }
 ```
+注意事项：
+由于宽度只能使用数值所以如果想要宽度满屏的话需要这样使用，这样获取到宽度再赋值给width就可以了
+```
+import { Dimensions } from 'react-native';
+
+Dimensions.get('window').width, //整个屏幕的宽度
+```
