@@ -85,3 +85,5 @@ import { Dimensions } from 'react-native';
 ...
 
 ```
+
+博客教程地址：https://blog.csdn.net/sinat_30949835/article/details/87919455
