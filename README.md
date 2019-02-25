@@ -71,5 +71,10 @@ render() {
 ```
 import { Dimensions } from 'react-native';
 
-Dimensions.get('window').width, //整个屏幕的宽度
+...
+<RollingText 
+    width = {Dimensions.get('window').width}  //整个屏幕的宽度
+/>
+...
+
 ```
