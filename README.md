@@ -13,7 +13,7 @@ props：
 8. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
 
 使用事例：
-<RollingText 
+```<RollingText 
     textList = {[{label : '1',value : '1234567890abcdefghigklmnopqrstuvwxyz啊吧从的额分个好i个看了吗你哦平去人是他uv我想有在'},{label : '2',value : '  哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟'},{label : '3',value : '  喝口水的交话费了喝口水的交话费了'}]}
     speed = {60}
     width = {100}
@@ -48,4 +48,4 @@ props：
             })
         }
     }}
-/>
+/>```
