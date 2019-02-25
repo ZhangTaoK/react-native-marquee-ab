@@ -3,7 +3,8 @@
 react-native版本，横向滚动跑马灯。支持多个text数据，支持自定义宽度，支持点击事件回调。支持android和ios。
 
 演示：
-![image](https://github.com/帐号/工程/分支/放图片的文件夹/图片名)
+
+![image](https://github.com/ZhangTaoK/react-native-rolling-text/blob/master/ScreenRecording_02-25-2019-14-46-06.gif)
 
 props：
  1. duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为10秒传入10000。
@@ -16,7 +17,9 @@ props：
  8. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
 
 使用教程：
+
  1.下载 RollingText.js 文件 放到项目中。
+ 
  2.直接引入直接使用，无需添加其他代码。
 
 事例代码：
