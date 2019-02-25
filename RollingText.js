@@ -124,7 +124,7 @@ export default class RollingText extends Component {
         let newText = nextProps.textList || [];
         let oldText = this.props.textList || [];
         if (newText !== oldText) {
-        this.state.animation.stop();
+        this.state.animation && this.state.animation.stop();
         this.setState({
             textList : newText,
             animation: null,
