@@ -1,6 +1,9 @@
 # react-native-rolling-text
 
-react-native版本，横向滚动跑马灯。支持多个text数据，支持自定义宽度，支持点击事件回调。
+react-native版本，横向滚动跑马灯。支持多个text数据，支持自定义宽度，支持点击事件回调。支持android和ios。
+
+演示：
+![image](https://github.com/帐号/工程/分支/放图片的文件夹/图片名)
 
 props：
  1. duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为10秒传入10000。
