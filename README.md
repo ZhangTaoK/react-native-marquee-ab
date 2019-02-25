@@ -11,7 +11,7 @@ props：
  2. speed (px/s) 选填 滚动速度 : 传入一秒钟执行多少像素的动画，用来替代duration，一般使用这个属性来控制滚动速度 默认为0，建议传入60。
  3. textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
  4. width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
- 5. height (num) 选填 整个组件的高度 ！！宽度不能使用flex！！
+ 5. height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
  6. bgContainerStyle (obj style) 选填 背景样式
  7. textStyle (obj style) 选填 文本样式
  8. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
