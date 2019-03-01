@@ -38,31 +38,31 @@
  
 #### MarqueeHorizontal props
 
- * 1. duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为10秒传入10000。
- * 2. speed (px/s) 选填 滚动速度 : 传入一秒钟执行多少像素的动画，用来替代duration，一般使用这个属性来控制滚动速度 默认为0，建议传入60。
- * 3. textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
- * 4. width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
- * 5. height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
- * 6. direction (string) 方向，值有 left、right
- * 7. reverse (boolean) 是否倒叙整个字符串
- * 8. separator (num) 两个item之间的间隙，默认20
- * 9. bgContainerStyle (obj style) 选填 背景样式
- * 10. textStyle (obj style) 选填 文本样式
- * 11. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
+ *  duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为10秒传入10000。
+ *  speed (px/s) 选填 滚动速度 : 传入一秒钟执行多少像素的动画，用来替代duration，一般使用这个属性来控制滚动速度 默认为0，建议传入60。
+ *  textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
+ *  width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
+ *  height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
+ *  direction (string) 方向，值有 left、right
+ *  reverse (boolean) 是否倒叙整个字符串
+ *  separator (num) 两个item之间的间隙，默认20
+ *  bgContainerStyle (obj style) 选填 背景样式
+ *  textStyle (obj style) 选填 文本样式
+ *  onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
  
 #### MarqueeVertical props
 
  * 1. duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为600毫秒。
  * 2. textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
- * 3. width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
- * 4. height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
- * 5. delay (ms) 文本停顿时间，默认1200毫秒
- * 6. direction (string) 方向，值有 up、down
- * 7. numberOfLines (num) 同一个数据的文本行数，默认为1
- * 8. viewStyle (obj style) 每一行文本的样式
- * 9. bgContainerStyle (obj style) 选填 背景样式
- * 10. textStyle (obj style) 选填 文本样式
- * 11. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
+ *  width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
+ *  height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
+ *  delay (ms) 文本停顿时间，默认1200毫秒
+ *  direction (string) 方向，值有 up、down
+ *  numberOfLines (num) 同一个数据的文本行数，默认为1
+ *  viewStyle (obj style) 每一行文本的样式
+ *  bgContainerStyle (obj style) 选填 背景样式
+ *  textStyle (obj style) 选填 文本样式
+ *  onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
 
 # Usage
 
