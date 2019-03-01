@@ -12,6 +12,7 @@
 * 支持每一条文本数据的点击事件
 * 支持自定义滚动速度
 * 支持自定义样式
+
 其他请阅读本组件支持的Api
 
 ### 事例演示
@@ -24,13 +25,16 @@ gif  gif
 # Install
 
 ### 直接把js文件下载到您的项目中，直接使用。
-* xxx.js
-* xxx.js
+
+* MarqueeHorizontal.js
+* MarqueeVertical.js
 
 ### npm
+
 暂不支持
 
 # Props
+
  本组件支持以下Api，如需要新的Api欢迎提出新的issues
 *
 *
@@ -43,14 +47,137 @@ gif  gif
 
 ## 1.import
  
+//这里根据你的实际文件存放路径引入文件
+```
+import MarqueeHorizontal from './MarqueeHorizontal';
+import MarqueeVertical from './MarqueeVertical';
+```
+
+npm
+暂不支持
+
 ## 2.Use
+```
+import { View, Dimensions } from 'react-native';
 
+//这里根据你的实际文件存放路径引入文件
+import MarqueeHorizontal from './MarqueeHorizontal';
+import MarqueeVertical from './MarqueeVertical';
 
-react-native版本，横向滚动跑马灯。支持多个text数据，支持自定义宽度，支持点击事件回调。支持android和ios。
+...
+render() {
+        let mWidth = Dimensions.get('window').width;
+        return(
+            <View style = {{flex : 1,backgroundColor : '#FFFFFF'}}>
 
-演示：
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
 
-![image](https://github.com/ZhangTaoK/react-native-rolling-text/blob/master/ScreenRecording_02-25-2019-14-46-06.gif)
+                <MarqueeHorizontal
+                    textList = {[
+                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                        {label : '2',value : 'item2:两只老虎跑的快'},
+                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
+                    ]}
+                    speed = {60}
+                    width = {mWidth}
+                    height = {50}
+                    direction = {'left'}
+                    reverse = {false}
+                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                    textStyle = {{fontSize : 16,color : '#FF0000'}}
+                    onTextClick = {(item) => {
+                        alert(''+JSON.stringify(item));
+                    }}
+                />
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+                
+                <MarqueeHorizontal
+                    textList = {[
+                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                        {label : '2',value : 'item2:两只老虎跑的快'},
+                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
+                    ]}
+                    speed = {60}
+                    width = {mWidth}
+                    height = {50}
+                    direction = {'right'}
+                    reverse = {false}
+                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                    textStyle = {{fontSize : 16,color : '#FF0000'}}
+                    onTextClick = {(item) => {
+                        alert(''+JSON.stringify(item));
+                    }}
+                />
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+
+                <MarqueeVertical
+                    textList = {[
+                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                        {label : '2',value : 'item2:两只老虎跑的快'},
+                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
+                    ]}
+                    width = {mWidth}
+                    height = {50}
+                    direction = {'up'}
+                    numberOfLines = {1}
+                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                    textStyle = {{fontSize : 16,color : '#FF0000'}}
+                    onTextClick = {(item) => {
+                        alert(''+JSON.stringify(item));
+                    }}
+                />
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+
+                <MarqueeVertical
+                    textList = {[
+                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                        {label : '2',value : 'item2:两只老虎跑的快'},
+                        {label : '3',value : 'item3:蓝蓝的天上白云飘白云下面小肥羊儿跑羊儿哪里跑。'},
+                    ]}
+                    width = {mWidth}
+                    height = {50}
+                    direction = {'down'}
+                    numberOfLines = {1}
+                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                    textStyle = {{fontSize : 16,color : '#FF0000'}}
+                    onTextClick = {(item) => {
+                        alert(''+JSON.stringify(item));
+                    }}
+                />
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+
+                <View style = {{width : mWidth,height : 50,backgroundColor : '#FFFFFF',flexDirection : 'row',justifyContent : 'center',alignItems : 'center'}}>
+                    <View style = {{width : mWidth / 2,height : 50,backgroundColor : '#FFFF00',borderRadius : 50 / 2,paddingHorizontal : 50 / 2}}>
+                        <MarqueeHorizontal
+                            textList = {[
+                                {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                                {label : '2',value : 'item2:两只老虎跑的快'},
+                                {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
+                            ]}
+                            speed = {60}
+                            width = {mWidth / 2 - 50}
+                            height = {50}
+                            direction = {'left'}
+                            separator = {30}
+                            reverse = {false}
+                            bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                            textStyle = {{fontSize : 16,color : '#FF0000'}}
+                            onTextClick = {(item) => {
+                                alert(''+JSON.stringify(item));
+                            }}
+                        />
+                    </View>
+                </View>
+            </View>
+        )
+    }
+...
+
+```
 
 props：
  1. duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为10秒传入10000。
@@ -62,62 +189,6 @@ props：
  7. textStyle (obj style) 选填 文本样式
  8. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
 
-使用教程：
-
- 1.下载 RollingText.js 文件 放到项目中。
- 
- 2.直接引入直接使用，无需添加其他代码。
-
-事例代码：
-```
-//引入RollingText.js文件
-import RollingText from './RollingText';
-
-......
-
-render() {
-    return (
-        <View style = {{ flex : 1 ,backgroundColor : '#FFFFFF' }}>
-            <RollingText 
-                textList = {[{label : '1',value : '1234567890abcdefghigklmnopqrstuvwxyz啊吧从的额分个好i个看了吗你哦平去人是他uv我想有在'},{label : '2',value : '  哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟'},{label : '3',value : '  喝口水的交话费了喝口水的交话费了'}]}
-                speed = {60}
-                width = {100}
-                height = {40}
-                bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-                textStyle = {{fontSize : 12,color : '#FF0000'}}
-                onTextClick = {(item) => {
-                    console.log(item);
-                    Alert.alert(''+JSON.stringify(item));
-                }}
-            />
-
-            <RollingText 
-                textList = {this.state.list}
-                speed = {60}
-                width = {300}
-                height = {40}
-                bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-                textStyle = {{fontSize : 15,color : '#FF0000'}}
-                onTextClick = {(item) => {
-                    console.log(item);
-                    Alert.alert(''+JSON.stringify(item));
-                    if(this.state.list.length < 5){
-                        this.setState({
-                            list : [
-                                {label : '1',value : 'kllskdjgjsioiejfalksdhjlashdgsjkdhfssd'},
-                                {label : '2',value : '    如果是辽阔的国际化卢萨卡；积分；阿尔回复；就考试大纲as；的接口规范；是的'},
-                                {label : '3',value : '    公司肯德基疯狂夺金'},
-                                {label : '4',value : '    工商联快递费吉林省大发牢骚'},
-                                {label : '5',value : '    gois就你付款金黄色的'}
-                            ]
-                        })
-                    }
-                }}
-            />
-        </View>
-    );
-}
-```
 注意事项：
 由于宽度只能使用数值所以如果想要宽度满屏的话需要这样使用，这样获取到宽度再赋值给width就可以了
 ```
