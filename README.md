@@ -1,7 +1,5 @@
 # react-native-marquee-ab
 
-(本项目目前已经可已使用，本项目文档进度 80%。。。)
-
 [ReactNative](https://github.com/facebook/react-native) Marquee，Support iOS and Android。
 
 使用了react-native中的Animated组件，利用纯js代码，实现Marquee(走马灯)组件。
