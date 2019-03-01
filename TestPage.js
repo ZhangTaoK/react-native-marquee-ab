@@ -1,0 +1,121 @@
+import React, { Component } from 'react';
+import {
+    View,
+    Dimensions,
+} from 'react-native';
+
+import MarqueeHorizontal from './MarqueeHorizontal';
+import MarqueeVertical from './MarqueeVertical';
+
+export default class TestPage extends Component{
+    render() {
+        let mWidth = Dimensions.get('window').width;
+        return(
+            <View style = {{flex : 1,backgroundColor : '#FFFFFF'}}>
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+
+                <MarqueeHorizontal
+                    textList = {[
+                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                        {label : '2',value : 'item2:两只老虎跑的快'},
+                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
+                    ]}
+                    speed = {60}
+                    width = {mWidth}
+                    height = {50}
+                    direction = {'left'}
+                    reverse = {false}
+                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                    textStyle = {{fontSize : 16,color : '#FF0000'}}
+                    onTextClick = {(item) => {
+                        alert(''+JSON.stringify(item));
+                    }}
+                />
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+                
+                <MarqueeHorizontal
+                    textList = {[
+                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                        {label : '2',value : 'item2:两只老虎跑的快'},
+                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
+                    ]}
+                    speed = {60}
+                    width = {mWidth}
+                    height = {50}
+                    direction = {'right'}
+                    reverse = {false}
+                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                    textStyle = {{fontSize : 16,color : '#FF0000'}}
+                    onTextClick = {(item) => {
+                        alert(''+JSON.stringify(item));
+                    }}
+                />
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+
+                <MarqueeVertical
+                    textList = {[
+                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                        {label : '2',value : 'item2:两只老虎跑的快'},
+                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
+                    ]}
+                    width = {mWidth}
+                    height = {50}
+                    direction = {'up'}
+                    numberOfLines = {1}
+                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                    textStyle = {{fontSize : 16,color : '#FF0000'}}
+                    onTextClick = {(item) => {
+                        alert(''+JSON.stringify(item));
+                    }}
+                />
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+
+                <MarqueeVertical
+                    textList = {[
+                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                        {label : '2',value : 'item2:两只老虎跑的快'},
+                        {label : '3',value : 'item3:蓝蓝的天上白云飘白云下面小肥羊儿跑羊儿哪里跑。'},
+                    ]}
+                    width = {mWidth}
+                    height = {50}
+                    direction = {'down'}
+                    numberOfLines = {1}
+                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                    textStyle = {{fontSize : 16,color : '#FF0000'}}
+                    onTextClick = {(item) => {
+                        alert(''+JSON.stringify(item));
+                    }}
+                />
+
+                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+
+                <View style = {{width : mWidth,height : 50,backgroundColor : '#FFFFFF',flexDirection : 'row',justifyContent : 'center',alignItems : 'center'}}>
+                    <View style = {{width : mWidth / 2,height : 50,backgroundColor : '#FFFF00',borderRadius : 50 / 2,paddingHorizontal : 50 / 2}}>
+                        <MarqueeHorizontal
+                            textList = {[
+                                {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
+                                {label : '2',value : 'item2:两只老虎跑的快'},
+                                {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
+                            ]}
+                            speed = {60}
+                            width = {mWidth / 2 - 50}
+                            height = {50}
+                            direction = {'left'}
+                            separator = {30}
+                            reverse = {false}
+                            bgContainerStyle = {{backgroundColor : '#FFFF00'}}
+                            textStyle = {{fontSize : 16,color : '#FF0000'}}
+                            onTextClick = {(item) => {
+                                alert(''+JSON.stringify(item));
+                            }}
+                        />
+                    </View>
+                </View>
+            </View>
+        )
+    }
+}
