@@ -52,8 +52,8 @@
  
 #### MarqueeVertical props
 
- * 1. duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为600毫秒。
- * 2. textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
+ *  duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为600毫秒。
+ *  textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
  *  width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
  *  height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
  *  delay (ms) 文本停顿时间，默认1200毫秒
