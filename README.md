@@ -195,12 +195,9 @@ props：
 import { Dimensions } from 'react-native';
 
 ...
-<RollingText 
-    ...
-    width = {Dimensions.get('window').width}  //整个屏幕的宽度
-/>
+ mWidth = Dimensions.get('window').width;  //整个屏幕的宽度
 ...
 
 ```
 
-博客教程地址：https://blog.csdn.net/sinat_30949835/article/details/87919455
+编辑中... 博客教程地址：https://blog.csdn.net/sinat_30949835/article/details/87919455
