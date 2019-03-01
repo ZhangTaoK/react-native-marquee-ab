@@ -3,29 +3,44 @@
 (本项目目前可用，本项目文档正在努力编写中。。。)
 
 [react-native](https://github.com/facebook/react-native) Marquee,It works on iOS and Android。
-使用了react-native Animated组件，纯js代码。
+使用了react-native中的Animated组件，利用纯js代码，实现Marquee(走马灯)组件。
 
 ### 实现功能
-* 支持Text的横向滚动（左右）
-* 支持Text的竖直滚动（上下）
-* 支持多个Text数据
-* 支持单个Text的点击事件
+* 支持文本的水平滚动（向左、向右）
+* 支持文本的竖直滚动（向上、向下）
+* 支持多条文本数据
+* 支持每一条文本数据的点击事件
 * 支持自定义滚动速度
 * 支持自定义样式
+其他请阅读本组件支持的Api
 
 ### 事例演示
 
 gif  gif
 
-# install
+# Install
 
-直接把js文件下载到您的项目中，直接使用。
+### 直接把js文件下载到您的项目中，直接使用。
 * xxx.js
 * xxx.js
-npm
+
+### npm
 暂不支持
 
-#
+# Props
+ 本组件支持以下Api，如需要新的Api欢迎提出新的issues
+*
+*
+*
+*
+*
+*
+
+# Usage
+
+## 1.import
+ 
+## 2.Use
 
 
 react-native版本，横向滚动跑马灯。支持多个text数据，支持自定义宽度，支持点击事件回调。支持android和ios。
