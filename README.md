@@ -1,4 +1,8 @@
-# react-native-rolling-text
+# react-native-marquee-ab
+
+(本项目目前可用，本项目文档正在努力编写中。。。)
+
+[react-native](https://github.com/facebook/react-native)Marquee,
 
 react-native版本，横向滚动跑马灯。支持多个text数据，支持自定义宽度，支持点击事件回调。支持android和ios。
 
