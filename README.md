@@ -26,8 +26,8 @@
 
 ### 直接把js文件下载到您的项目中，直接使用。
 
-* MarqueeHorizontal.js
-* MarqueeVertical.js
+* [MarqueeHorizontal.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/MarqueeHorizontal.js)
+* [MarqueeVertical.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/MarqueeVertical.js)
 
 ### npm
 
