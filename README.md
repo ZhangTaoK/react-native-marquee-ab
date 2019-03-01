@@ -65,7 +65,7 @@ import MarqueeHorizontal from './MarqueeHorizontal';
 import MarqueeVertical from './MarqueeVertical';
 
 ...
-render() {
+    render() {
         let mWidth = Dimensions.get('window').width;
         return(
             <View style = {{flex : 1,backgroundColor : '#FFFFFF'}}>
