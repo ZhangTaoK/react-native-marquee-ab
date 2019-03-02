@@ -1,0 +1,23 @@
+{
+  "name": "react-native-marquee-ab",
+  "version": "1.2.1",
+  "description": "react-native marquee",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhangTaoK/react-native-marquee-ab.git"
+  },
+  "keywords":[
+    "react-native",
+    "marquee"
+  ],
+  "author": "Dean Hetherington <zhangtaoandroid@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZhangTaoK/react-native-marquee-ab/issues"
+  },
+  "homepage": "https://github.com/ZhangTaoK/react-native-marquee-ab#readme"
+}
