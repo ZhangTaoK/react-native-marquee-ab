@@ -23,14 +23,8 @@
 
 # Install
 
-### 直接把js文件下载到您的项目中，直接使用。
-
-* [MarqueeHorizontal.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/MarqueeHorizontal.js)
-* [MarqueeVertical.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/MarqueeVertical.js)
-
 ### npm
-
-暂不支持
+npm i react-native-marquee-ab --save
 
 # Props
 
@@ -68,22 +62,14 @@
 
 ## 1.import
  
-//这里根据你的实际文件存放路径引入文件
 ```
-import MarqueeHorizontal from './MarqueeHorizontal';
-import MarqueeVertical from './MarqueeVertical';
+import { MarqueeHorizontal,MarqueeVertical } from 'react-native-marquee-ab';
 ```
-
-npm
-暂不支持
 
 ## 2.Use
 ```
 import { View, Dimensions } from 'react-native';
-
-//这里根据你的实际文件存放路径引入文件
-import MarqueeHorizontal from './MarqueeHorizontal';
-import MarqueeVertical from './MarqueeVertical';
+import { MarqueeHorizontal,MarqueeVertical } from 'react-native-marquee-ab';
 
 ...
     render() {
