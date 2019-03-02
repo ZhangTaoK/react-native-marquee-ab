@@ -87,7 +87,7 @@ export default class MarqueeVertical extends Component {
     componentWillReceiveProps(nextProps){
         let newText = nextProps.textList || [];
         let oldText = this.props.textList || [];
-        let newDirection = nextProps.textList || 'up';
+        let newDirection = nextProps.direction || 'up';
         if (newText !== oldText) {
             this.state.animation && this.state.animation.stop();
             this.setState({
