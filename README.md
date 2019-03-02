@@ -24,7 +24,9 @@
 # Install
 
 ### npm
+```
 npm i react-native-marquee-ab --save
+```
 
 # Props
 
