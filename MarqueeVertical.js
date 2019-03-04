@@ -6,8 +6,8 @@ import { View, Animated, Easing, Text, TouchableOpacity } from 'react-native';
  * 竖直滚动的文本跑马灯
  * Create by AbyssKitty on 2019/02/25
  * version 1.0
- * Update by AbyssKitty on 2019/03/01
- * version 1.2
+ * Update by AbyssKitty on 2019/03/04
+ * version 1.2.3
  * ================================================================
  */
 
@@ -103,7 +103,7 @@ export default class MarqueeVertical extends Component {
     componentDidUpdate(){
         console.log('componentDidUpdate');
         let { index, maxIndex, textIndex } = this.state;
-        let { duration, height, direction } = this.props;
+        let { duration, delay, height, direction } = this.props;
         if(!this.state.animation){
             let myIndex = 0;
             let yValue = 0;
@@ -149,10 +149,10 @@ export default class MarqueeVertical extends Component {
                         duration: duration,
                         useNativeDriver: true,
                         easing: Easing.linear,
-                        delay : 1000,
+                        delay : delay,
                     }),
             }, () => {
-                this.state.animation.start(() => {
+                this.state.animation && this.state.animation.start(() => {
                     this.setState({
                         animation: null,
                     });
@@ -169,9 +169,7 @@ export default class MarqueeVertical extends Component {
         let { textStyle, viewStyle, onTextClick, width, height, numberOfLines } = this.props;
         if(list == null || list == '' || list == [] || list.length <= 0){
             return (
-                <View style = {{width : width,height : height,flexDirection : 'row',justifyContent : 'flex-start',alignItems : 'center',backgroundColor : '#FFFF00'}}>
-                    <Text style = {{fontSize : 16,color : '#FF0000'}}>{"Props Error : textList is null"}</Text>
-                </View>
+                <View />
             );
         }
         let itemView = [];
