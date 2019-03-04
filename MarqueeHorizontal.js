@@ -5,8 +5,8 @@ import { View, Animated, Easing, Text, TouchableOpacity } from 'react-native';
  * ================================================================
  * 水平滚动的文本跑马灯
  * Create by AbyssKitty on 2019/02/25
- * Update by AbyssKitty on 2019/03/01
- * version 1.2
+ * Update by AbyssKitty on 2019/03/04
+ * version 1.2.3
  * ================================================================
  */
 
@@ -92,7 +92,7 @@ export default class MarqueeHorizontal extends Component {
                         easing: Easing.linear,
                     }),
             }, () => {
-                this.state.animation.start(() => {
+                this.state.animation && this.state.animation.start(() => {
                     this.setState({
                         animation: null,
                     });
