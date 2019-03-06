@@ -199,4 +199,4 @@ import { Dimensions } from 'react-native';
 
 ```
 
-编辑中... 博客教程地址：https://blog.csdn.net/sinat_30949835/article/details/87919455
+博客地址：https://blog.csdn.net/sinat_30949835/article/details/87919455
