@@ -16,10 +16,8 @@
 
 ### 事例演示
 
-#### Version 1.2.0
+#### Version 1.2.4
 ![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/marquee-ab-demo-gif-001.gif) ![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/marquee-ab-demo-gif-002.gif)
-#### Old version 1.0.0
-![image](https://github.com/ZhangTaoK/react-native-rolling-text/blob/master/ScreenRecording_02-25-2019-14-46-06.gif)
 
 # Install
 
