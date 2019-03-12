@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
-import { View, Animated, Easing, Text, TouchableOpacity } from 'react-native';
-
-/**
- * ================================================================
- * 水平滚动的文本跑马灯
- * Create by AbyssKitty on 2019/02/25
- * Update by AbyssKitty on 2019/03/04
- * version 1.2.3
- * ================================================================
- */
+import { View, Animated, Easing, Text, TouchableOpacity, InteractionManager } from 'react-native';
 
 const styles = {
     bgContainerStyle : {
@@ -30,21 +21,7 @@ const styles = {
         color : '#000000',
     }
 };
-/*
- * ReactNative 水平滚动的文本跑马灯
- * props：
- * 1. duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为10秒传入10000。
- * 2. speed (px/s) 选填 滚动速度 : 传入一秒钟执行多少像素的动画，用来替代duration，一般使用这个属性来控制滚动速度 默认为0，建议传入60。
- * 3. textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
- * 4. width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
- * 5. height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
- * 6. direction (string) 方向，值有 left、right
- * 7. reverse (boolean) 是否倒叙整个字符串
- * 8. separator (num) 两个item之间的间隙，默认20
- * 9. bgContainerStyle (obj style) 选填 背景样式
- * 10. textStyle (obj style) 选填 文本样式
- * 11. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
- */
+
 export default class MarqueeHorizontal extends Component {
     constructor(props) {
         super(props);
@@ -117,17 +94,27 @@ export default class MarqueeHorizontal extends Component {
         this.state.animation && this.state.animation.stop();
     }
 
-    textOnLayout(e){
+    textOnLayout = (e) => {
+        let width = e.nativeEvent.layout.width;
         let { textList, separator } = this.props;
-        this.setState({
-            textWidth : e.nativeEvent.layout.width + ((textList.length - 1) * separator),
-        })
+        setTimeout(() => {
+            InteractionManager.runAfterInteractions(() => {
+                this.setState({
+                    textWidth : width + ((textList.length - 1) * separator),
+                })
+            });
+        },100);
     }
 
-    viewOnLayout(e){
-        this.setState({
-            viewWidth : e.nativeEvent.layout.width,
-        })
+    viewOnLayout = (e) => {
+        let width = e.nativeEvent.layout.width;
+        setTimeout(() => {
+            InteractionManager.runAfterInteractions(() => {
+                this.setState({
+                    viewWidth : width,
+                })
+            });
+        },100);
     }
 
     textView(list){
