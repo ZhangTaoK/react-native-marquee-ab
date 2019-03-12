@@ -1,15 +1,5 @@
 import React, { Component } from 'react';
-import { View, Animated, Easing, Text, TouchableOpacity } from 'react-native';
-
-/**
- * ================================================================
- * 竖直滚动的文本跑马灯
- * Create by AbyssKitty on 2019/02/25
- * version 1.0
- * Update by AbyssKitty on 2019/03/04
- * version 1.2.3
- * ================================================================
- */
+import { View, Animated, Easing, Text, TouchableOpacity, InteractionManager } from 'react-native';
 
 const styles = {
     bgContainerStyle : {
@@ -28,21 +18,6 @@ const styles = {
     }
 };
 
-/*
- * ReactNative 竖直滚动的文本跑马灯
- * props：
- * 1. duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为600毫秒。
- * 2. textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
- * 3. width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
- * 4. height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
- * 5. delay (ms) 文本停顿时间，默认1200毫秒
- * 6. direction (string) 方向，值有 up、down
- * 7. numberOfLines (num) 同一个数据的文本行数，默认为1
- * 8. viewStyle (obj style) 每一行文本的样式
- * 9. bgContainerStyle (obj style) 选填 背景样式
- * 10. textStyle (obj style) 选填 文本样式
- * 11. onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
- */
 export default class MarqueeVertical extends Component {
     constructor(props) {
         super(props);
@@ -77,11 +52,15 @@ export default class MarqueeVertical extends Component {
 
     componentDidMount(){
         let { textList, direction } = this.props;
-        this.setState({
-            maxIndex : textList.length + 2,
-            textIndex : textList.length,
-            index : direction == 'down' ? textList.length : 1,
-        })
+        setTimeout(() => {
+            InteractionManager.runAfterInteractions(() => {
+                this.setState({
+                    maxIndex : textList.length + 2,
+                    textIndex : textList.length,
+                    index : direction == 'down' ? textList.length : 1,
+                })
+            });
+        },100);
     }
 
     componentWillReceiveProps(nextProps){
@@ -101,7 +80,6 @@ export default class MarqueeVertical extends Component {
     }
 
     componentDidUpdate(){
-        console.log('componentDidUpdate');
         let { index, maxIndex, textIndex } = this.state;
         let { duration, delay, height, direction } = this.props;
         if(!this.state.animation){
