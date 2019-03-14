@@ -52,15 +52,11 @@ export default class MarqueeVertical extends Component {
 
     componentDidMount(){
         let { textList, direction } = this.props;
-        setTimeout(() => {
-            InteractionManager.runAfterInteractions(() => {
-                this.setState({
-                    maxIndex : textList.length + 2,
-                    textIndex : textList.length,
-                    index : direction == 'down' ? textList.length : 1,
-                })
-            });
-        },100);
+        this.setState({
+            maxIndex : textList.length + 2,
+            textIndex : textList.length,
+            index : direction == 'down' ? textList.length : 1,
+        })
     }
 
     componentWillReceiveProps(nextProps){

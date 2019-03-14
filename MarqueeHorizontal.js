@@ -97,13 +97,9 @@ export default class MarqueeHorizontal extends Component {
     textOnLayout = (e) => {
         let width = e.nativeEvent.layout.width;
         let { textList, separator } = this.props;
-        setTimeout(() => {
-            InteractionManager.runAfterInteractions(() => {
-                this.setState({
-                    textWidth : width + ((textList.length - 1) * separator),
-                })
-            });
-        },100);
+        this.setState({
+            textWidth : width + ((textList.length - 1) * separator),
+        })
     }
 
     viewOnLayout = (e) => {
