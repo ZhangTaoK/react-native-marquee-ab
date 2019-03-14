@@ -5,6 +5,7 @@
 [![npm](https://img.shields.io/npm/dt/react-native-marquee-ab.svg)](https://www.npmjs.com/package/react-native-marquee-ab)
 [![npm](https://img.shields.io/npm/l/react-native-marquee-ab.svg)](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/LICENSE)
 
+
 [ReactNative](https://github.com/facebook/react-native) Marquee，Support iOS and Android。
 
 使用了react-native中的Animated组件，利用纯js代码，实现Marquee(走马灯)组件。
@@ -16,13 +17,14 @@
 * 支持每一条文本数据的点击事件
 * 支持自定义滚动速度
 * 支持自定义样式
+* 支持竖直滚动在头部添加自定义view
 
 其他请阅读本组件支持的Api
 
 ### 事例演示
 
-#### Version 1.2.4
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/marquee-ab-demo-gif-001.gif) ![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/marquee-ab-demo-gif-002.gif)
+#### Version 1.2.6
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif)
 
 # Install
 
@@ -61,6 +63,7 @@ npm i react-native-marquee-ab --save
  *  viewStyle (obj style) 每一行文本的样式
  *  bgContainerStyle (obj style) 选填 背景样式
  *  textStyle (obj style) 选填 文本样式
+ *  headViews 选填 滚动的header
  *  onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
 
 # Usage
@@ -72,126 +75,11 @@ import { MarqueeHorizontal,MarqueeVertical } from 'react-native-marquee-ab';
 ```
 
 ## 2.Use
-```
-import { View, Dimensions } from 'react-native';
-import { MarqueeHorizontal,MarqueeVertical } from 'react-native-marquee-ab';
 
-...
-    render() {
-        let mWidth = Dimensions.get('window').width;
-        return(
-            <View style = {{flex : 1,backgroundColor : '#FFFFFF'}}>
+### 详细事例代码：
+[https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/example/src/pages/TestPage.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/example/src/pages/TestPage.js)
 
-                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
-
-                <MarqueeHorizontal
-                    textList = {[
-                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
-                        {label : '2',value : 'item2:两只老虎跑的快'},
-                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
-                    ]}
-                    speed = {60}
-                    width = {mWidth}
-                    height = {50}
-                    direction = {'left'}
-                    reverse = {false}
-                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-                    textStyle = {{fontSize : 16,color : '#FF0000'}}
-                    onTextClick = {(item) => {
-                        alert(''+JSON.stringify(item));
-                    }}
-                />
-
-                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
-                
-                <MarqueeHorizontal
-                    textList = {[
-                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
-                        {label : '2',value : 'item2:两只老虎跑的快'},
-                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
-                    ]}
-                    speed = {60}
-                    width = {mWidth}
-                    height = {50}
-                    direction = {'right'}
-                    reverse = {false}
-                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-                    textStyle = {{fontSize : 16,color : '#FF0000'}}
-                    onTextClick = {(item) => {
-                        alert(''+JSON.stringify(item));
-                    }}
-                />
-
-                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
-
-                <MarqueeVertical
-                    textList = {[
-                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
-                        {label : '2',value : 'item2:两只老虎跑的快'},
-                        {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
-                    ]}
-                    width = {mWidth}
-                    height = {50}
-                    direction = {'up'}
-                    numberOfLines = {1}
-                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-                    textStyle = {{fontSize : 16,color : '#FF0000'}}
-                    onTextClick = {(item) => {
-                        alert(''+JSON.stringify(item));
-                    }}
-                />
-
-                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
-
-                <MarqueeVertical
-                    textList = {[
-                        {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
-                        {label : '2',value : 'item2:两只老虎跑的快'},
-                        {label : '3',value : 'item3:蓝蓝的天上白云飘白云下面小肥羊儿跑羊儿哪里跑。'},
-                    ]}
-                    width = {mWidth}
-                    height = {50}
-                    direction = {'down'}
-                    numberOfLines = {1}
-                    bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-                    textStyle = {{fontSize : 16,color : '#FF0000'}}
-                    onTextClick = {(item) => {
-                        alert(''+JSON.stringify(item));
-                    }}
-                />
-
-                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
-
-                <View style = {{width : mWidth,height : 50,backgroundColor : '#FFFFFF',flexDirection : 'row',justifyContent : 'center',alignItems : 'center'}}>
-                    <View style = {{width : mWidth / 2,height : 50,backgroundColor : '#FFFF00',borderRadius : 50 / 2,paddingHorizontal : 50 / 2}}>
-                        <MarqueeHorizontal
-                            textList = {[
-                                {label : '1',value : 'item1:一闪一闪亮晶晶，满天都是小星星'},
-                                {label : '2',value : 'item2:两只老虎跑的快'},
-                                {label : '3',value : 'item3:蓝蓝的天上白云飘，白云下面小肥羊儿跑'},
-                            ]}
-                            speed = {60}
-                            width = {mWidth / 2 - 50}
-                            height = {50}
-                            direction = {'left'}
-                            separator = {30}
-                            reverse = {false}
-                            bgContainerStyle = {{backgroundColor : '#FFFF00'}}
-                            textStyle = {{fontSize : 16,color : '#FF0000'}}
-                            onTextClick = {(item) => {
-                                alert(''+JSON.stringify(item));
-                            }}
-                        />
-                    </View>
-                </View>
-            </View>
-        )
-    }
-...
-
-```
-
-注意事项：
+### 注意事项：
 由于宽度只能使用数值所以如果想要宽度满屏的话需要这样使用，这样获取到宽度再赋值给width就可以了
 ```
 import { Dimensions } from 'react-native';

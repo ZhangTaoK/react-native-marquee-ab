@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {
     View,
+    Text,
+    Image,
     Dimensions,
 } from 'react-native';
 
@@ -71,6 +73,15 @@ export default class TestPage extends Component{
                     ]}
                     width = {mWidth}
                     height = {50}
+                    headViews = {[
+                        <Image 
+                            source = {require('../images/hot.png')}
+                            style = {{width : 46,height : 28}}
+                        />,
+                        <View/>,
+                        <View/>,
+                    ]}
+                    delay = {2000}
                     direction = {'up'}
                     numberOfLines = {1}
                     bgContainerStyle = {{backgroundColor : '#FFFF00'}}
@@ -90,6 +101,17 @@ export default class TestPage extends Component{
                     ]}
                     width = {mWidth}
                     height = {50}
+                    headViews = {[
+                        <View style = {{backgroundColor : '#FF0000',padding : 5,borderRadius : 3,marginHorizontal : 5}}>
+                            <Text style = {{color : '#FFFFFF'}}>{'hd1'}</Text>
+                        </View>,
+                        <View style = {{backgroundColor : '#FF0000',padding : 5,borderRadius : 3,marginHorizontal : 5}}>
+                            <Text style = {{color : '#FFFFFF'}}>{'hd2'}</Text>
+                        </View>,
+                        <View style = {{backgroundColor : '#FF0000',padding : 5,borderRadius : 3,marginHorizontal : 5}}>
+                            <Text style = {{color : '#FFFFFF'}}>{'热门'}</Text>
+                        </View>,
+                    ]}
                     direction = {'down'}
                     numberOfLines = {1}
                     bgContainerStyle = {{backgroundColor : '#FFFF00'}}

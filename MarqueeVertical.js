@@ -13,6 +13,7 @@ const styles = {
         alignItems : 'center'
     },
     textStyle : {
+        flex : 1,
         fontSize : 16,
         color : '#000000'
     }
@@ -140,14 +141,22 @@ export default class MarqueeVertical extends Component {
     }
 
     singleLineTextView(list){
-        let { textStyle, viewStyle, onTextClick, width, height, numberOfLines } = this.props;
+        let { textStyle, viewStyle, onTextClick, width, height, numberOfLines, headViews } = this.props;
         if(list == null || list == '' || list == [] || list.length <= 0){
             return (
                 <View />
             );
         }
+        let headViewList = [];
+        let mHeadViewList = [];
         let itemView = [];
         let mlist = [];
+        if(headViews == null || list == '' || list == [] || list.length <= 0){}else{
+            headViewList = headViewList.concat(headViews);
+            mHeadViewList = mHeadViewList.concat(headViewList);
+            mHeadViewList.push(headViewList[0]);
+            mHeadViewList.unshift(headViewList[headViewList.length - 1]);
+        }
         mlist = mlist.concat(list);
         mlist.push(list[0]);
         mlist.unshift(list[list.length - 1]);
@@ -163,6 +172,7 @@ export default class MarqueeVertical extends Component {
                     height : height,
                     ...viewStyle
                 }}>
+                    { mHeadViewList ? mHeadViewList[i] : null }
                     <Text style = {{
                         ...styles.textStyle,
                         ...textStyle
