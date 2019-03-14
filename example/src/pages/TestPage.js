@@ -4,9 +4,11 @@ import {
     Dimensions,
 } from 'react-native';
 
-//这里是事例，引用了绝对路径上的文件。
+//这里是事例，引用了绝对路径上的文件，测试专用。
 import MarqueeHorizontal from '../marquee/MarqueeHorizontal';
 import MarqueeVertical from '../marquee/MarqueeVertical';
+//正式使用请使用这里
+// import { MarqueeHorizontal,MarqueeVertical } from 'react-native-marquee-ab';
 
 export default class TestPage extends Component{
     // setTimeout(() => {
