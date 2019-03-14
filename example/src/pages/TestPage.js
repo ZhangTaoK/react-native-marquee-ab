@@ -4,16 +4,22 @@ import {
     Dimensions,
 } from 'react-native';
 
-import MarqueeHorizontal from './MarqueeHorizontal';
-import MarqueeVertical from './MarqueeVertical';
+//这里是事例，引用了绝对路径上的文件。
+import MarqueeHorizontal from '../marquee/MarqueeHorizontal';
+import MarqueeVertical from '../marquee/MarqueeVertical';
 
 export default class TestPage extends Component{
+    // setTimeout(() => {
+    //     InteractionManager.runAfterInteractions(() => {
+    //          ***
+    //     });
+    // },100);
     render() {
         let mWidth = Dimensions.get('window').width;
         return(
             <View style = {{flex : 1,backgroundColor : '#FFFFFF'}}>
 
-                <View style = {{height : 10,backgroundColor : '#FFFFFF',width : '100%'}}/>
+                <View style = {{height : 50,backgroundColor : '#FFFFFF',width : '100%'}}/>
 
                 <MarqueeHorizontal
                     textList = {[

@@ -1,0 +1,6 @@
+example/
+
+*.gif
+
+.gitattributes
+.gitignore
