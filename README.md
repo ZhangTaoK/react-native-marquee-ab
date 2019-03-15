@@ -38,33 +38,41 @@ npm i react-native-marquee-ab --save
  本组件支持以下Api，如需要新的Api欢迎提出新的issues
  
 #### MarqueeHorizontal props
-
- *  duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为10秒传入10000。
- *  speed (px/s) 选填 滚动速度 : 传入一秒钟执行多少像素的动画，用来替代duration，一般使用这个属性来控制滚动速度 默认为0，建议传入60。
- *  textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
- *  width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
- *  height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
- *  direction (string) 方向，值有 left、right
- *  reverse (boolean) 是否倒叙整个字符串
- *  separator (num) 两个item之间的间隙，默认20
- *  bgContainerStyle (obj style) 选填 背景样式
- *  textStyle (obj style) 选填 文本样式
- *  onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
+| prop | type  | default | required | description |
+|:----:|:----:|:-------:|:---:|:---:|
+|duration|number|10000|yes|执行整个动画的完成时间(ms)|
+|speed|number|0|no|滚动速度|
+|textList|array|[]|yes|滚动的文字数组|
+|width|number|375|no|宽度，不能使用flex|
+|height|number|50|no|高度，不能使用flex|
+|direction|string|left|yes|动画方向`left|right`|
+|reverse|bool|false|yes|执行整个动画的完成时间(ms)|
+|separator|number|20|yes|两个item之间的间隙|
+|bgContainerStyle|object||no|背景样式|
+|textStyle|object||no|文本样式|
+|onTextClick|func||yes|点击事件回调：(item) => void|
  
 #### MarqueeVertical props
+| prop | type  | default | required | description |
+|:----:|:----:|:-------:|:---:|:---:|
+|duration|number|600|yes|执行整个动画的完成时间(ms)|
+|textList|array|[]|yes|滚动的文字数组|
+|width|number|375|no|宽度，不能使用flex|
+|height|number|50|no|高度，不能使用flex|
+|delay|number|12000|yes|文本停顿时间(ms)|
+|direction|string|up|yes|动画方向`up|down`|
+|numberOfLines|number|1|yes|同一个数据的文本行数|
+|viewStyle|object||yes|每一行文本的样式|
+|bgContainerStyle|object||no|背景样式|
+|textStyle|object||no|文本样式|
+|headViews|object||no|滚动的header|
+|onTextClick|func||yes|点击事件回调：(item) => void|
 
- *  duration (ms) 选填 执行时间 : 传入毫秒数，执行完整个动画的时间，默认为600毫秒。
- *  textList ([{label : '1',value : '这是滚动文本'},...]) 必填 文本数组 : 滚动的文字数组，必须按照固定格式传参，value用作文本显示，label用作点击事件回调。
- *  width (num) 选填 整个组件的宽度 ！！宽度不能使用flex！！
- *  height (num) 选填 整个组件的高度 ！！高度不能使用flex！！
- *  delay (ms) 文本停顿时间，默认1200毫秒
- *  direction (string) 方向，值有 up、down
- *  numberOfLines (num) 同一个数据的文本行数，默认为1
- *  viewStyle (obj style) 每一行文本的样式
- *  bgContainerStyle (obj style) 选填 背景样式
- *  textStyle (obj style) 选填 文本样式
- *  headViews 选填 滚动的header
- *  onTextClick (fun) 点击事件回调 : 返回点击的textList中的item
+#### textList.item props
+| prop | type  | default | required | description |
+|:----:|:----:|:-------:|:---:|:---:|
+|label|string||yes|用作点击事件的回调|
+|value|string||yes|文本显示|
 
 # Usage
 
@@ -91,3 +99,4 @@ import { Dimensions } from 'react-native';
 ```
 
 博客地址：https://blog.csdn.net/sinat_30949835/article/details/87919455
+
