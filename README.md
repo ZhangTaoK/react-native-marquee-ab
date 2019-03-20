@@ -46,7 +46,7 @@ npm i react-native-marquee-ab --save
 |width|number|375|yes|宽度，不能使用flex|
 |height|number|50|yes|高度，不能使用flex|
 |direction|string|left|yes|动画方向(向左向右滚动)`left` or `right`|
-|reverse|bool|false|yes|执行整个动画的完成时间(ms)|
+|reverse|bool|false|yes|是否将整个文本数据倒叙显示|
 |separator|number|20|yes|两个item之间的间隙|
 |bgContainerStyle|object||no|背景样式|
 |textStyle|object||no|文本样式|
