@@ -40,12 +40,12 @@ npm i react-native-marquee-ab --save
 #### MarqueeHorizontal props
 | prop | type  | default | required | description |
 |:----:|:----:|:-------:|:---:|:---:|
-|duration|number|10000|yes|执行整个动画的完成时间(ms)|
-|speed|number|0|no|滚动速度|
-|textList|array|[]|yes|滚动的文字数组|
-|width|number|375|no|宽度，不能使用flex|
-|height|number|50|no|高度，不能使用flex|
-|direction|string|left|yes|动画方向`left|right`|
+|duration|number|10000ms|yes|执行完成整个动画所需要的时间(ms)不常用|
+|speed|number|0|no|平均的滚动速度，跑马灯使用这个属性（建议传入60）|
+|textList|array|[]|yes|滚动的文字数组，具体数据格式请参照textList.item|
+|width|number|375|yes|宽度，不能使用flex|
+|height|number|50|yes|高度，不能使用flex|
+|direction|string|left|yes|动画方向(向左向右滚动)'left'|'right'|
 |reverse|bool|false|yes|执行整个动画的完成时间(ms)|
 |separator|number|20|yes|两个item之间的间隙|
 |bgContainerStyle|object||no|背景样式|
@@ -56,11 +56,11 @@ npm i react-native-marquee-ab --save
 | prop | type  | default | required | description |
 |:----:|:----:|:-------:|:---:|:---:|
 |duration|number|600|yes|执行整个动画的完成时间(ms)|
-|textList|array|[]|yes|滚动的文字数组|
+|textList|array|[]|yes|滚动的文字数组，具体数据格式请参照textList.item|
 |width|number|375|no|宽度，不能使用flex|
 |height|number|50|no|高度，不能使用flex|
 |delay|number|12000|yes|文本停顿时间(ms)|
-|direction|string|up|yes|动画方向`up|down`|
+|direction|string|up|yes|动画方向(向上向下滚动)'up'|'down'|
 |numberOfLines|number|1|yes|同一个数据的文本行数|
 |viewStyle|object||yes|每一行文本的样式|
 |bgContainerStyle|object||no|背景样式|
@@ -73,6 +73,12 @@ npm i react-native-marquee-ab --save
 |:----:|:----:|:-------:|:---:|:---:|
 |label|string||yes|用作点击事件的回调|
 |value|string||yes|文本显示|
+|[object]|[object]||no|可随意添加数据供自己特殊需求使用|
+
+##### 事例数据
+```
+[{label : 1,value : '小肥羊'},...]
+```
 
 # Usage
 
