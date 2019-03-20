@@ -62,6 +62,7 @@ npm i react-native-marquee-ab --save
 |delay|number|12000|yes|文本停顿时间(ms)|
 |direction|string|up|yes|动画方向(向上向下滚动)`up` or `down`|
 |numberOfLines|number|1|yes|同一个数据的文本行数|
+|mHeadViewList|array[]||no|在文本最前面加上一个自定义view，效果如图例所示，用法请参照事例用法，length长度与textList必须一致|
 |viewStyle|object||yes|每一行文本的样式|
 |bgContainerStyle|object||no|背景样式|
 |textStyle|object||no|文本样式|
