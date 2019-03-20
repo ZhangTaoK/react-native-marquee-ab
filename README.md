@@ -45,7 +45,7 @@ npm i react-native-marquee-ab --save
 |textList|array|[]|yes|滚动的文字数组，具体数据格式请参照textList.item|
 |width|number|375|yes|宽度，不能使用flex|
 |height|number|50|yes|高度，不能使用flex|
-|direction|string|left|yes|动画方向(向左向右滚动)'left'|'right'|
+|direction|string|left|yes|动画方向(向左向右滚动)`left` or `right`|
 |reverse|bool|false|yes|执行整个动画的完成时间(ms)|
 |separator|number|20|yes|两个item之间的间隙|
 |bgContainerStyle|object||no|背景样式|
@@ -60,7 +60,7 @@ npm i react-native-marquee-ab --save
 |width|number|375|no|宽度，不能使用flex|
 |height|number|50|no|高度，不能使用flex|
 |delay|number|12000|yes|文本停顿时间(ms)|
-|direction|string|up|yes|动画方向(向上向下滚动)'up'|'down'|
+|direction|string|up|yes|动画方向(向上向下滚动)`up` or `down`|
 |numberOfLines|number|1|yes|同一个数据的文本行数|
 |viewStyle|object||yes|每一行文本的样式|
 |bgContainerStyle|object||no|背景样式|
