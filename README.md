@@ -106,3 +106,7 @@ import { Dimensions } from 'react-native';
 
 博客地址：https://blog.csdn.net/sinat_30949835/article/details/87919455
 
+下一版本：
+执行完成后的回调
+多行文本的支持
+
