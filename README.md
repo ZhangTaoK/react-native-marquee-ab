@@ -135,7 +135,7 @@ import { Dimensions } from 'react-native';
 * 修改默认样式
 
 #### 捐赠
-您的一份鼓励与支持，就是作者最大的动力。
+您的一份鼓励与支持，就是作者最大的动力。<br/>[国内捐赠地址](http://note.youdao.com/s/bxKl1gBi)<br/>
 <img src="https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg"  height="435" width="280">
 <img src="https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/wechat.png"  height="384" width="280">
 
