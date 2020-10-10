@@ -128,14 +128,17 @@ import { Dimensions } from 'react-native';
 
 ##### v1.2.6 （推荐）
 * 新增竖直滚动的header样式
-历史文档：[https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/OLDREADME.md](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/OLDREADME.md)
-使用教程：[https://blog.csdn.net/sinat_30949835/article/details/87919455](https://blog.csdn.net/sinat_30949835/article/details/87919455)
+<br/>历史文档：[https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/OLDREADME.md](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/OLDREADME.md)
+<br/>使用教程：[https://blog.csdn.net/sinat_30949835/article/details/87919455](https://blog.csdn.net/sinat_30949835/article/details/87919455)
 
 ##### v1.2.5
 * 修改默认样式
 
 #### 捐赠
 您的一份鼓励与支持，就是作者最大的动力。
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg)
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/wechat.jpg)
 
 ##### 捐赠列表
+感谢！
 * kt_xlb
