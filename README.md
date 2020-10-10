@@ -35,7 +35,7 @@ v2.0.0-rc.1 新增：
 新版本暂未上传npm，所以新版仅供在github交流，待完善功能修复bug后，再进行更新。目前根目录的MarqueeHorizontal和MarqueeVertical还是1.2.6版本的，最新版本的代码请直接[点击这里](https://github.com/ZhangTaoK/react-native-marquee-ab/tree/master/example/src/marquee)进行阅读交流。
 
 #### Version 1.2.6
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif)
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif 300X400)
 
 # Install
 
@@ -103,7 +103,7 @@ import { MarqueeHorizontal,MarqueeVertical } from 'react-native-marquee-ab';
 ## 2.Use
 
 ### 详细事例代码：
-[https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/example/src/pages/TestPage.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/example/src/pages/TestPage.js)
+[https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/1.2.6/TestPage.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/1.2.6/TestPage.js)
 
 ### 注意事项：
 由于宽度只能使用数值所以如果想要宽度满屏的话需要这样使用，这样获取到宽度再赋值给width就可以了
@@ -136,8 +136,8 @@ import { Dimensions } from 'react-native';
 
 #### 捐赠
 您的一份鼓励与支持，就是作者最大的动力。
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg)
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/wechat.png)
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg 300X400)
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/wechat.png 300X400)
 
 ##### 捐赠列表
 感谢！

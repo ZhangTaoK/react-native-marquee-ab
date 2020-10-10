@@ -24,7 +24,7 @@
 ### 事例演示
 
 #### Version 1.2.6
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif)
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif 300X400)
 
 # Install
 
@@ -91,7 +91,7 @@ import { MarqueeHorizontal,MarqueeVertical } from 'react-native-marquee-ab';
 ## 2.Use
 
 ### 详细事例代码：
-[https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/example/src/pages/TestPage.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/example/src/pages/TestPage.js)
+[https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/1.2.6/TestPage.js](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/1.2.6/TestPage.js)
 
 ### 注意事项：
 由于宽度只能使用数值所以如果想要宽度满屏的话需要这样使用，这样获取到宽度再赋值给width就可以了
