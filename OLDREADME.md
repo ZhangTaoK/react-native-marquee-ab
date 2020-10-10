@@ -24,7 +24,7 @@
 ### 事例演示
 
 #### Version 1.2.6
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif 300X400)
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif)
 
 # Install
 

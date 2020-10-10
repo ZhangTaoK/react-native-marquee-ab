@@ -35,7 +35,7 @@ v2.0.0-rc.1 新增：
 新版本暂未上传npm，所以新版仅供在github交流，待完善功能修复bug后，再进行更新。目前根目录的MarqueeHorizontal和MarqueeVertical还是1.2.6版本的，最新版本的代码请直接[点击这里](https://github.com/ZhangTaoK/react-native-marquee-ab/tree/master/example/src/marquee)进行阅读交流。
 
 #### Version 1.2.6
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif 300X400)
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif)
 
 # Install
 
@@ -136,9 +136,8 @@ import { Dimensions } from 'react-native';
 
 #### 捐赠
 您的一份鼓励与支持，就是作者最大的动力。
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg 300*400)
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/wechat.png 300X400)
-<img src="https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg"  height="400" width="300">
+<img src="https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg"  height="435" width="280">
+<img src="https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/wechat.png"  height="384" width="280">
 
 ##### 捐赠列表
 感谢！
