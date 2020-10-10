@@ -136,7 +136,7 @@ import { Dimensions } from 'react-native';
 
 #### 捐赠
 您的一份鼓励与支持，就是作者最大的动力。
-![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg 300X400)
+![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg 300*400)
 ![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/wechat.png 300X400)
 
 ##### 捐赠列表
