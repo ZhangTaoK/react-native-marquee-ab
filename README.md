@@ -17,7 +17,7 @@ v2.0.0-rc.1 新增：
 * 修改水平滚动模式，更换为Animated.loop方法，使首尾相连的不间断滚动更加丝滑。
 * 更多功能正在开发中...
 
-上一版本(v1.2.6[历史文档])：
+上一版本(v1.2.6[历史文档](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/OLDREADME.md))：
 * 支持文本的水平滚动（向左、向右）
 * 支持文本的竖直滚动（向上、向下）
 * 支持多条文本数据
@@ -32,7 +32,7 @@ v2.0.0-rc.1 新增：
 
 #### Version 2.0.0-rc.1
 ！！！暂无新版本演示！！！
-新版本暂未上传npm，所以新版仅供在github交流，待完善功能修复bug后，再进行更新。目前根目录的MarqueeHorizontal和MarqueeVertical还是1.2.6版本的，最新版本的代码请直接[点击这里]进行阅读交流。
+新版本暂未上传npm，所以新版仅供在github交流，待完善功能修复bug后，再进行更新。目前根目录的MarqueeHorizontal和MarqueeVertical还是1.2.6版本的，最新版本的代码请直接[点击这里](https://github.com/ZhangTaoK/react-native-marquee-ab/tree/master/example/src/marquee)进行阅读交流。
 
 #### Version 1.2.6
 ![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif)
@@ -124,12 +124,18 @@ import { Dimensions } from 'react-native';
 * 增加水平滚动的Swiper模式。
 * 修改水平滚动模式，更换为Animated.loop方法，使首尾相连的不间断滚动更加丝滑。
 
-源码路径：
+源码路径：更新的代码暂未放到根目录，阅读交流请前往测试文件夹[https://github.com/ZhangTaoK/react-native-marquee-ab/tree/master/example/src/marquee](https://github.com/ZhangTaoK/react-native-marquee-ab/tree/master/example/src/marquee)
 
 ##### v1.2.6 （推荐）
 * 新增竖直滚动的header样式
-历史文档：
+历史文档：[https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/OLDREADME.md](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/OLDREADME.md)
 使用教程：[https://blog.csdn.net/sinat_30949835/article/details/87919455](https://blog.csdn.net/sinat_30949835/article/details/87919455)
 
 ##### v1.2.5
 * 修改默认样式
+
+#### 捐赠
+您的一份鼓励与支持，就是作者最大的动力。
+
+##### 捐赠列表
+* kt_xlb
