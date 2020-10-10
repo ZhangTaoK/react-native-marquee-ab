@@ -8,16 +8,9 @@
 
 [ReactNative](https://github.com/facebook/react-native) Marquee，Support iOS and Android。
 
-使用了react-native中的Animated API，且只使用了react-native&js代码，实现Marquee(走马灯)组件。
+使用了react-native中的Animated组件，利用纯js代码，实现Marquee(走马灯)组件。
 
-### 支持的功能
-v2.0.0-rc.1 新增：
-* 增加水平滚动时首尾相连的功能。
-* 增加水平滚动的Swiper模式。
-* 修改水平滚动模式，更换为Animated.loop方法，使首尾相连的不间断滚动更加丝滑。
-* 更多功能正在开发中...
-
-上一版本(v1.2.6[历史文档])：
+### 实现功能
 * 支持文本的水平滚动（向左、向右）
 * 支持文本的竖直滚动（向上、向下）
 * 支持多条文本数据
@@ -30,10 +23,6 @@ v2.0.0-rc.1 新增：
 
 ### 事例演示
 
-#### Version 2.0.0-rc.1
-！！！暂无新版本演示！！！
-新版本暂未上传npm，所以新版仅供在github交流，待完善功能修复bug后，再进行更新。目前根目录的MarqueeHorizontal和MarqueeVertical还是1.2.6版本的，最新版本的代码请直接[点击这里]进行阅读交流。
-
 #### Version 1.2.6
 ![image](https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/react-native-marquee-ab-demo.gif)
 
@@ -43,9 +32,8 @@ v2.0.0-rc.1 新增：
 ```
 npm i react-native-marquee-ab --save
 ```
-（目前npm安装的版本依旧是1.2.6，待2.0.0版本功能完善修复bug后，再进行更新）
 
-# Props v1.2.6
+# Props
 
  本组件支持以下Api，如需要新的Api欢迎提出新的issues
  
@@ -118,18 +106,7 @@ import { Dimensions } from 'react-native';
 
 博客地址：https://blog.csdn.net/sinat_30949835/article/details/87919455
 
-### Historical version：
-##### v2.0.0-rc.1 (测试版本 最新 未上传npm)
-* 增加水平滚动时首尾相连的功能。
-* 增加水平滚动的Swiper模式。
-* 修改水平滚动模式，更换为Animated.loop方法，使首尾相连的不间断滚动更加丝滑。
+下一版本：
+执行完成后的回调
+多行文本的支持
 
-源码路径：
-
-##### v1.2.6 （推荐）
-* 新增竖直滚动的header样式
-历史文档：
-使用教程：[https://blog.csdn.net/sinat_30949835/article/details/87919455](https://blog.csdn.net/sinat_30949835/article/details/87919455)
-
-##### v1.2.5
-* 修改默认样式
