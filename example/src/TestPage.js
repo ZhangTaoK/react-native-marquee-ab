@@ -67,7 +67,7 @@ export default class TestPage extends Component {
                     </TouchableOpacity> */}
                 </View>
 
-                {/* <Text style = {styles.title}>{'Simple (普通跑马灯)'}</Text>
+                <Text style = {styles.title}>{'Simple (普通跑马灯)'}</Text>
                 <MarqueeHorizontal
                     ref={ref => this.mq = ref}
                     data={this.state.data}
@@ -89,7 +89,7 @@ export default class TestPage extends Component {
                     textStyle={{
                         fontSize: 14,
                     }}
-                /> */}
+                />
                 <Text style = {styles.title}>{'swiper (横向切换)'}</Text>
                 <MarqueeHorizontal
                     ref={ref => this.mq = ref}
