@@ -10,6 +10,8 @@
 
 使用了react-native中的Animated API，且只使用了react-native&js代码，实现Marquee(走马灯)组件。
 
+>很抱歉！因个人时间关系以及其他原因，本项目停止维护。
+
 ### 支持的功能
 v2.0.0-rc.1 新增：
 * 增加水平滚动时首尾相连的功能。
@@ -133,12 +135,3 @@ import { Dimensions } from 'react-native';
 
 ##### v1.2.5
 * 修改默认样式
-
-#### 捐赠
-您的一份鼓励与支持，就是作者最大的动力。<br/>[国内捐赠地址](http://note.youdao.com/s/bxKl1gBi)<br/>
-<img src="https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/alipay.jpg"  height="435" width="280">
-<img src="https://github.com/ZhangTaoK/react-native-marquee-ab/blob/master/old/pay/wechat.png"  height="384" width="280">
-
-##### 捐赠列表
-感谢！
-* kt_xlb
